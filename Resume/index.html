@@ -23,6 +23,8 @@
     <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="js/BootstraGallery/css/bootstrap-image-gallery.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -477,7 +479,28 @@
                             <!-- Project Details Go Here -->
                             <h2>Stay &amp; Sahre 民宿網</h2>
                             <p class="item-intro text-muted">網站開發</p>
-                            <img class="img-responsive" src="img/portfolio/1.png" alt="">
+
+                            <div id="links">
+                                <a href="img/about/1.jpg" title="Banana" data-gallery>
+                                    <img width="100" src="img/about/1.jpg" alt="Banana">
+                                </a>
+                                <a href="img/about/2.jpg" title="Apple" data-gallery>
+                                    <img width="100" src="img/about/2.jpg" alt="Apple">
+                                </a>
+                                <a href="img/about/3.jpg" title="Orange" data-gallery>
+                                    <img width="100" src="img/about/3.jpg" alt="Orange">
+                                </a>
+                                <a href="img/about/1.jpg" title="Banana" data-gallery>
+                                    <img width="100" src="img/about/1.jpg" alt="Banana">
+                                </a>
+                                <a href="img/about/2.jpg" title="Apple" data-gallery>
+                                    <img width="100" src="img/about/2.jpg" alt="Apple">
+                                </a>
+                                <a href="img/about/3.jpg" title="Orange" data-gallery>
+                                    <img width="100" src="img/about/3.jpg" alt="Orange">
+                                </a>                                
+                            </div>
+
                             <p>使用Google Map API 定位店家 & 線上訂房系統 </p>
                             <p>
                               <a href="#">待補</a>
@@ -543,16 +566,15 @@
                             <img class="img-responsive img-centered" src="img/portfolio/3.png" alt="">
                             <p>使用Bootstrap3建立，結合Line、多層次傳銷、Facebook會員登入等技術，可使用Line將活動訊息傳給朋友，此為電腦/手機皆可正常瀏覽的行動版網站。 </p>
                             <p>前台</p>
-                            <p>
-                              帳號 : admin
-                              密碼 : 我的手機
-                              <a href="http://1workshop.comeze.com/LineShare/appie/member_index.php">Live Demo</a>
-                            </p>                                                        
+                            <p>帳號 : admin</p>
+                            <p>密碼 : 我的手機</p>                                                        
                             <p>後台</p>
-                            <p>帳號 : appie
-                            密碼 : 12345
-                            <a href="http://1workshop.comeze.com/LineShare/appie/owner_login.php">後台DEMO</a>
-                            </p>                            
+                            <p>帳號 : appie</p>
+                            <p>密碼 : 12345</p>                            
+                            <p>
+                              <a href="http://1workshop.comeze.com/LineShare/appie/member_index.php">Live Demo</a>
+                              <a href="http://1workshop.comeze.com/LineShare/appie/owner_login.php">後台DEMO</a>
+                            </p>    
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> 關閉專案說明</button>
                         </div>
                     </div>
@@ -577,7 +599,7 @@
                             <!-- Project Details Go Here -->
                             <h2>盈亮健康科技</h2>
                             <p class="item-intro text-muted"> PHP程式設計 </p>
-                            <img class="img-responsive img-centered" src="img/portfolio/4.PNG" alt="">
+                            <img class="img-responsive img-centered" src="img/portfolio/4.png" alt="">
                             <p>PHP程式串接，建立購物車、金流串接等。</p>
                             <p>
                               <a href="http://www.yingliang.com.tw/">Live Demo</a>
@@ -606,7 +628,7 @@
                             <!-- Project Details Go Here -->
                             <h2>兆鴻藥業有限公司</h2>
                             <p class="item-intro text-muted">PHP程式設計</p>
-                            <img class="img-responsive img-centered" src="img/portfolio/5.PNG" alt="">
+                            <img class="img-responsive img-centered" src="img/portfolio/5.png" alt="">
                             <p>製作公司介紹、影片嵌入、聯絡我們等功能</p>
                             <p>
                               <a href="http://gotc.tw/index.php">Live Demo</a>
@@ -635,13 +657,49 @@
                             <!-- Project Details Go Here -->
                             <h2>社團法人台灣牛樟芝產業協會 </h2>
                             <p class="item-intro text-muted">PHP程式設計</p>
-                            <img class="img-responsive img-centered" src="img/portfolio/6.PNG" alt="">
+                            <img class="img-responsive img-centered" src="img/portfolio/6.png" alt="">
                             <p>製作討論區、活動報名、問卷調查等</p>
                             <p>
                               <a href="http://www.tnccia.org.tw/">Live Demo</a>
                             </p> 
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> 關閉專案說明</button>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+    <div id="blueimp-gallery" class="blueimp-gallery">
+        <!-- The container for the modal slides -->
+        <div class="slides"></div>
+        <!-- Controls for the borderless lightbox -->
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+        <!-- The modal dialog, which will be used to wrap the lightbox content -->
+        <div class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body next"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left prev">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            Previous
+                        </button>
+                        <button type="button" class="btn btn-primary next">
+                            Next
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -665,6 +723,10 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
+
+    <!-- bootstrap gallery -->
+    <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="js/BootstraGallery/js/bootstrap-image-gallery.min.js"></script>
 
 </body>
 
