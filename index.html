@@ -3,30 +3,181 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
-    <title>Github</title>
+    <title>竹科掃廁所工程師的 Github</title>
 	  <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
     <!-- jquery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>  
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        $('body').scrollspy({ target: '#navbar-example' });
+        $('.go-hell').click(function(event) {
+            alert('好啦 我會幫你轉址到XVIDEO');
+            location.href = 'http://www.theuselessweb.com/';
+        });
+
+        $(".go_top").click(function () {
+            $("html,body").animate({ scrollTop: 0 }, 500);
+            return false;
+        });
+
+        
+        $("#nav ul li a[href^='#']").on('click', function(e) {
+        
+           // prevent default anchor click behavior
+           e.preventDefault();
+        
+           // store hash
+           var hash = this.hash;
+        
+           // animate
+           $('html, body').animate({
+               scrollTop: $(this.hash).offset().top
+             }, 300, function(){
+        
+               // when done, add hash to url
+               // (default click behaviour)
+               window.location.hash = hash;
+             });        
+        });
+        
+      });
+      </script>
+
 </head>
+
+<style>
+  body{
+    padding-top: 50px;
+  }
+</style>
 <body>
+
+<nav id="navbar-example" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand go_top" href="#index">首頁</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div id="nav" class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#intro" class="active">簡介</a>
+        </li>
+        <li>
+          <a href="#resume">履歷</a>
+        </li>
+        <li>
+          <a href="#demo">作品集</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+</nav>
+
 
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-          <h2>Hello , 這裡是 Nonegrame 的 github.io 首頁 </h2>
-          <p>姓名: <span class="label label-info">Nonegrame</span></p>
-          <p>工作: <span class="label label-success">竹科掃廁所工程師</span></p>
-          <p>人生必讀:<a href="rainbowcolor/rainbow.html">出師表</a></p>
-          <p>大頭貼:</p>
-          <img src="images/283146.jpg" alt="今天我生日ㄛ" class="img-responsive img-circle">
+          <a id="intro"></a>
+          <h2></h2>
+          <div class="jumbotron">
+            <h2>Hello , 這裡是 Nonegrame 的 github.io 首頁</h2>         
+            <p>&nbsp;</p>   
+            <p>
+              <a class="btn btn-primary btn-lg go-hell" href="javascript:void(0)" role="button">帶我離開這裡!</a>
+            </p>
+          </div>        
+          <h2>個人簡介</h2>  
+          <table class="table table-bordered">
+            <tr>
+              <td>大頭貼</td>
+              <td>
+                <img src="images/283146.jpg" alt="今天我生日ㄛ" class="img-responsive img-circle" width="100">
+              </td>
+            </tr>
+            <tr>
+              <td>姓名</td>
+              <td><strong>Nonegrame</strong></td>
+            </tr>
+            <tr>
+              <td>工作</td>
+              <td>
+                <span class="text-success">竹科掃廁所工程師</span>
+                、
+                <span class="text-success">專業 22K PHP程式設計師</span>
+              </td>
+            </tr>
+            <tr>
+              <td>經典推薦</td>
+              <td><a href="rainbowcolor/rainbow.html">出師表</a></td>
+            </tr>
+            <tr>
+              <td colspan="2">經歷</td>              
+            </tr>
+            <tr>
+              <td colspan="2">
+                <p>國小資源班連<span class="label label-success">六</span>年<span class="label label-danger"> 第一 </span></p>
+                <p>國中資源班連<span class="label label-success">三</span>年<span class="label label-danger"> 第一 </span></p>
+                <p>高中校史紀錄<span class="label label-warning">重修王</span></p>
+                <p>大學讀九年畢業紀錄</p>   
+                <p>現為<strong>竹科掃廁所工程師</strong></p>             
+              </td>
+            </tr>
+
+          </table>
+
+          <!-- 履歷 -->
+          <a id="resume"></a>          
+          <h2>履歷</h2>     
+          <ol>
+            <li>台中某APP公司 Android程式設計師 兼 PHP程式設計師 兼 行動網頁設計師 兼 案件執行企劃 兼 MIS</li>
+            <li>竹科掃廁所試用助理</li>
+            <li>竹科掃廁所助理</li>
+            <li>竹科掃廁所試用工程師</li>
+            <li>竹科掃廁所工程師</li>
+            <li><label class="label label-success">現職</label> 竹科掃廁所資深工程師</li>
+          </ol>
+          <p>嗜好:廁所乾淨時寫PHP &amp; JavaScript</p>
+          <p>多益成績: <span class="text-danger">250</span> 分</p>
+
+          <h2>作品集</h2>
+          <a id="demo"></a>
+          <ol>
+            <li> <span class="text-info"> Stay &amp; Share 民宿網 </span></li>
+            <li> <span class="text-info"> 很多公司的官網跟後台 </span></li>
+            <li> <span class="text-info"> 很多公司的購物車跟後台 </span></li>
+          </ol>          
+          <p>以上純屬虛構 如有雷同 都是巧合</p>
+          <p>附錄: 好歌推薦 掃廁所累的時候 都聽他</p>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/jI-kpVh6e1U"></iframe>
+          </div>
+          <br>
         </div> <!-- col end -->
 
     </div><!-- row end -->
 
 </div><!-- container end -->
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">喔~~喔喔~~喔喔~~喔喔~爪爪</p>
+    </div>
+  </footer>
+
 
 </body>
 </html>
