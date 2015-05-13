@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+    <title>Ruby tag</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <!-- jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>  
+    <script src="commafy.js"></script>        
+    <style>  
+    rtc:lang(en) {
+      ruby-position: under;
+      ruby-align: center;
+      font-size: 75%;
+    }    
+    </style>
+    <script>
+    $(function() {
+
+        $('p').commafy({
+          signShow   : true , 
+          sign       : '€' ,         
+        });
+
+    });
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+          <h2>Ruby 新標籤</h2>
+          <h3>這可是 mozilla 官方範例!!</h3>
+          <h4 class="text-info">僅 Firefox 38.0+ 完整支援</h4>
+          <br>
+          <ruby>
+            <rb>とある<rb>科学<rb>の<rb>超電磁砲</rb>
+            <rp>（</rp><rt>とある<rt>かがく<rt>の<rt>レールガン</rt><rp>、</rp>
+            <rtc lang="en">A Certain Scientific Railgun</rtc><rp>）</rp>
+          </ruby>     
+          <p>1000000</p>     
+        </div> <!-- col end -->
+
+    </div><!-- row end -->
+
+</div><!-- container end -->
+
+</body>
+</html>
