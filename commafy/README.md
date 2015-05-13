@@ -1,5 +1,12 @@
 # jQuery commafy
 
+## 說明
+
+用 JavaScript function 產生三位一撇的 function 早就有了
+
+但是 jQuery 出現 導致直接用 function 套 一點都不潮
+
+於是把三位一撇的 function 加入 jQuery 現在用起來潮多了~
 
 ## 用法
 
@@ -40,7 +47,8 @@
  $ 記號文字 ( signShow 必須為 *true* 才有效果 )
 
     $('p').commafy({
-        sign : '€'
+        signShow : true , 
+        sign     : '€'
     });
 
 
@@ -94,5 +102,5 @@
 
 >( 只是把原來的 JavaScript function 放到 jQuery 裡 )
 
->JavaScript 來源
+> JavaScript 程式碼來源
 <http://infofabwhat.blogspot.tw/2012/05/js.html>
