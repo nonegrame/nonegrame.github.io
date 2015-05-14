@@ -35,7 +35,7 @@
 
 ## 使用方法
 
-必須安裝 node 及擁有 admin 權限
+必須安裝 node 及擁有檔案 777 權限
 
 1. 打開 cmd 開啟本資料夾
 2. 輸入 `node index.js <filename.js>`
