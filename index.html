@@ -52,11 +52,88 @@
              });
         });
 
+        $('.toggle-cool').on('click', function() {
+            $('body').toggleClass('cool-mode');
+            var $button = $(this);
+            if ($('body').hasClass('cool-mode')) {
+                $button.text('回到普通模式');
+            } else {
+                $button.text('我要炫炮!');
+            }
+        });
+
       });
       </script>
       <style>
         body{
           padding-top: 50px;
+        }
+
+        body.cool-mode {
+          animation: coolGradient 8s ease infinite;
+          background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #a18cd1, #fbc2eb, #a6c1ee);
+          background-size: 400% 400%;
+          color: #fff;
+        }
+
+        body.cool-mode .jumbotron,
+        body.cool-mode .table,
+        body.cool-mode .panel,
+        body.cool-mode .navbar,
+        body.cool-mode footer {
+          background-color: rgba(0, 0, 0, 0.35);
+          border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        body.cool-mode .navbar.navbar-inverse {
+          border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body.cool-mode .jumbotron h2,
+        body.cool-mode .table td,
+        body.cool-mode .table th,
+        body.cool-mode .text-muted,
+        body.cool-mode .navbar-brand,
+        body.cool-mode .nav > li > a {
+          color: #fff;
+        }
+
+        body.cool-mode .table-bordered > tbody > tr > td,
+        body.cool-mode .table-bordered > tbody > tr > th,
+        body.cool-mode .table-bordered > tfoot > tr > td,
+        body.cool-mode .table-bordered > tfoot > tr > th,
+        body.cool-mode .table-bordered > thead > tr > td,
+        body.cool-mode .table-bordered > thead > tr > th {
+          border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        body.cool-mode .btn-primary {
+          background-color: rgba(255, 255, 255, 0.25);
+          border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        body.cool-mode .btn-default {
+          background-color: rgba(255, 255, 255, 0.2);
+          border-color: rgba(255, 255, 255, 0.35);
+          color: #fff;
+        }
+
+        body.cool-mode .label {
+          background-color: rgba(255, 255, 255, 0.2);
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes coolGradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
         }
       </style>
 </head>
@@ -104,6 +181,7 @@
             <p>&nbsp;</p>
             <p>
               <a class="btn btn-primary btn-lg go-hell" href="javascript:void(0)" role="button">帶我離開這裡!</a>
+              <a class="btn btn-default btn-lg toggle-cool" href="javascript:void(0)" role="button">我要炫炮!</a>
             </p>
           </div>
           <h2>個人簡介</h2>
