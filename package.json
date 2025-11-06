@@ -1,0 +1,14 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "hexo generate",
+    "deploy": "hexo deploy",
+    "start": "hexo server"
+  },
+  "dependencies": {
+    "hexo": "^5.4.0",
+    "hexo-deployer-git": "^3.0.0"
+  }
+}
