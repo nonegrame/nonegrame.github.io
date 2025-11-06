@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>竹科掃廁所工程師的 Github</title>
+	  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+    <!-- jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5W4WSBW');</script>
+    <!-- End Google Tag Manager -->
+    <script>
+      $(function() {
+        $('body').scrollspy({ target: '#navbar-example' });
+        $('.go-hell').click(function(event) {
+            alert('好啦 我會幫你轉址到弘爺');
+            location.href = 'http://www.theuselessweb.com/';
+        });
+
+        $(".go_top").click(function () {
+            $("html,body").animate({ scrollTop: 0 }, 500);
+            return false;
+        });
+
+
+        $("#nav ul li a[href^='#']").on('click', function(e) {
+
+           // prevent default anchor click behavior
+           e.preventDefault();
+
+           // store hash
+           var hash = this.hash;
+
+           // animate
+           $('html, body').animate({
+               scrollTop: $(this.hash).offset().top
+             }, 300, function(){
+
+               // when done, add hash to url
+               // (default click behaviour)
+               window.location.hash = hash;
+             });
+        });
+
+      });
+      </script>
+      <style>
+        body{
+          padding-top: 50px;
+        }
+      </style>
+</head>
+
+<body>
+
+<nav id="navbar-example" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand go_top" href="#index">首頁</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div id="nav" class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#intro" class="active">簡介</a>
+        </li>
+        <li>
+          <a href="#resume">履歷</a>
+        </li>
+        <li>
+          <a href="#demo">作品集</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+</nav>
+<!-- Test Now -->
+
+<%- body %>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">喔~~喔喔~~喔喔~~喔喔~爪爪</p>
+    </div>
+  </footer>
+</body>
+</html>
