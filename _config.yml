@@ -1,0 +1,42 @@
+# Hexo Configuration
+## Site
+name: nonegrame.github.io
+title: 竹科掃廁所工程師的 Github
+subtitle:
+description: "竹科掃廁所工程師的 Github"
+keywords:
+author: nonegrame
+language: zh-TW
+timezone: Asia/Taipei
+
+## URL
+url: https://nonegrame.github.io
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+## Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+
+## Writing
+new_post_name: :title.md
+default_layout: post
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+default_category: uncategorized
+titlecase: false
+
+## Deployment
+## The actual deployment is handled by GitHub Actions.
+deploy:
+  type:

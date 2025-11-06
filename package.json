@@ -1,0 +1,14 @@
+{
+  "name": "nonegrame-github-io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hexo source for nonegrame.github.io",
+  "scripts": {
+    "clean": "hexo clean",
+    "build": "hexo generate",
+    "serve": "hexo server"
+  },
+  "dependencies": {
+    "hexo": "^6.3.0"
+  }
+}
